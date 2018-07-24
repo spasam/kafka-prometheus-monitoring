@@ -1,5 +1,5 @@
 lowercaseOutputName: true
-jmxUrl: service:jmx:rmi:///jndi/rmi://{{ getv "/jmx/host" }}:{{ getv "/jmx/port" }}/jmxrmi
+jmxUrl: service:jmx:rmi:///jndi/rmi://127.0.0.1:1099/jmxrmi
 rules:
 - pattern : kafka.network<type=Processor, name=IdlePercent, networkProcessor=(.+)><>Value
 - pattern : kafka.network<type=RequestMetrics, name=RequestsPerSec, request=(.+)><>OneMinuteRate
